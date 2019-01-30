@@ -1,2 +1,2 @@
 #!/bin/bash
-find directory -type d -exec chmod 111 {} +
+find directory -type d -exec chmod ugo+x {} +
