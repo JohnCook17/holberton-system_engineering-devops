@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -size 0 | rev | cut -d'/' -f 1 | rev
+find . -depth -empty -type f -o -empty -type d | rev | cut -d'/' -f 1 | rev
