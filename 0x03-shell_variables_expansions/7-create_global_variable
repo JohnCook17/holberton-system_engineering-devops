@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e '\nHOLBERTON=Betty\n' >> /.bashrc
+echo -e HOLBERTON=Betty >> /.bashrc
