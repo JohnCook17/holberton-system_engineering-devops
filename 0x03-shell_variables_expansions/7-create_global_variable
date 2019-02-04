@@ -1,2 +1,2 @@
 #!/bin/bash
-HOLBERTON=Betty >> /.bashrc
+export HOLBERTON=Betty
