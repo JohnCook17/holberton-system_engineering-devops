@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #superstitious numbers
-n=1
+n=0
 while (( n <= 20))
 do
     n=$(( n+1 ))
