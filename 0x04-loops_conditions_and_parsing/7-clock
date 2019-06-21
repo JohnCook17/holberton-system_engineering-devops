@@ -1,1 +1,15 @@
 #!/usr/bin/env bash
+hour=0
+minute=1
+echo "Hour: "$hour
+while (($hour != 13))
+do
+    if [ $minute = 60 ]
+    then
+        minute=1
+        hour=$((hour+1))
+        echo "Hour: "$hour
+    fi
+    echo $minute
+    minute=$((minute+1))
+done
