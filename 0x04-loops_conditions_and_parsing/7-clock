@@ -3,14 +3,14 @@
 hour=0
 minute=1
 echo "Hour: "$hour
-while ((hour != 13))
+while ((hour < 12))
 do
-    if [ $minute = 60 ]
+    echo $minute
+    if [ $minute = 59 ]
     then
-        minute=1
+        minute=0
         hour=$((hour+1))
         echo "Hour: "$hour
     fi
-    echo $minute
     minute=$((minute+1))
 done
