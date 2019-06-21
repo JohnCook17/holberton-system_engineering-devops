@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #superstitious numbers
 n=0
-while (( n <= 20))
+while (( n < 20))
 do
     n=$(( n+1 ))
     if [ $n = 5 ]
