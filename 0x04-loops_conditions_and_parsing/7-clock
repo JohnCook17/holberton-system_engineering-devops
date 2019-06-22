@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 #clock
 hour=0
-minute=1
-echo "Hour: "$hour
+minute=60
 while ((hour < 12))
 do
-    echo $minute
-    if [ $minute = 59 ]
+    if [ $minute = 60 ]
     then
-        minute=0
-        hour=$((hour+1))
+        minute=1
         echo "Hour: "$hour
+        hour=$((hour+1))
     fi
+    echo $minute
     minute=$((minute+1))
 done
