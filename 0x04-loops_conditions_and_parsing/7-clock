@@ -2,15 +2,18 @@
 #clock
 hour=0
 minute=60
-while ((hour <= 12))
+while ((hour <= 13))
 do
     if [ $minute = 60 ]
     then
         minute=1
-        echo "Hour: "$hour
+        if ((hour != 13))
+        then
+            echo "Hour: "$hour
+        fi
         hour=$((hour+1))
     fi
-    if ((hour <= 12))
+    if ((hour <= 13))
     then
         echo $minute
     fi
