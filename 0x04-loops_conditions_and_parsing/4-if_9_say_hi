@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#say hi after 9th print
 n=1
 while (( n <= 10))
 do

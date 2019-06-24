@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-files=$(find ./*glob* | cut -d '-' -f 2)
+#ls all files and removes the assignment numbers
+files=$(find -- * | cut -d '-' -f 2)
 for i in $files
 do
     echo "$i"

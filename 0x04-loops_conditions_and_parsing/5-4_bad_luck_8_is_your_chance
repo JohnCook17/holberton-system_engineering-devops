@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#prints 1-10 and bad luck and good luck at the correct places
 n=1
 while (( n <= 10))
 do

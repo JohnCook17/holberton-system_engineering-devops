@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
+#superstitious numbers
 n=1
 while (( n <= 20))
 do
-    n=$(( n+1 ))
-    if [ $n = 5 ]
-    then
-        echo "bad luck from China"
-    elif [ $n = 10 ]
-    then
-        echo "bad luck from Japan"
-    elif [ $n = 18 ]
-    then
-        echo "bad luck from Italy"
-    fi
     echo $n
+    case $n in
+        4)
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "bad luck from Italy"
+            ;;
+    esac
+    n=$(( n+1 ))
 done

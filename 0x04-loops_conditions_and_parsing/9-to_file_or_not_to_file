@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#checks if a file exist and its properties
 FILE=holbertonschool
 if [ -e "$FILE" ]
 then
