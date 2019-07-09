@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#pings the given ip address 5 times
 if [ "$*" ]
 then
     ping "$*" -c 5
