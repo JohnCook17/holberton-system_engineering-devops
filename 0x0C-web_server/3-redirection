@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # redirects traffic
+
 apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
