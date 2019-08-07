@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+apt-get update
+apt-get install nginx
+ufw allow 'Nginx HTTP'
+echo "<div>Holberton School</div>" >> /var/www/html/index.nginx-debian.html
