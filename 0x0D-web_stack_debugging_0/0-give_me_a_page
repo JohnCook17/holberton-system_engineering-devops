@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script to set up Apache on docker running Ubuntu 14.04
+
+sudo service apache2 restart
