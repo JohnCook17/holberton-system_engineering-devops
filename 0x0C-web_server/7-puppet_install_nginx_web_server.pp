@@ -1,7 +1,7 @@
 package {'nginx':
     ensure => installed,
 }
-file {'<path>':
+file {'path':
     content => 'Holberton School',
     path    => '/var/www/html/index.html',
 }
