@@ -3,4 +3,4 @@
 
 printf "\nfrontend haproxynode\nbind *:80\nmode http\ndefault_backend backendnodes\n" >> /etc/haproxy/haproxy.cfg
 printf "\nbackend backendnodes\nbalance roundrobin\nserver 655-web-01 35.196.125.111\nserver 655-web-02 35.185.45.37\n" >> /etc/haproxy/haproxy.cfg
-/etc/init.d/haproxy restart
+service haproxy start
