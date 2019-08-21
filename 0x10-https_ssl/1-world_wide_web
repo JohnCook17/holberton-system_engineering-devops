@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# checks a website and its subdomains for a records
+
+
+if [ -z "$1" ]
+then
+exit 1
+fi
+if [ $# = 1 ]
+then
+    for subdomain in "www" "lb-01" "web-01" "web-02"
+    do
+        SUB=$subdomain.$1
+        dig "$SUB" | grep -A1 'ANSWER SECTION' > tmp
+        awk -v subdomain="$subdomain" 'NR == 2 {print "The subdomain "subdomain" is a "$4" record and points to "$5}' tmp
+    done
+else
+    dig "$2.$1" | grep -A1 'ANSWER SECTION' > tmp
+    awk -v subdomain="$2" 'NR == 2 {print "The subdomain "subdomain" is a "$4" record and points to "$5}' tmp
+fi
