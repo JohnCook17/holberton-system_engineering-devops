@@ -46,7 +46,7 @@ reqadd X-Forwarded-Proto:\ http
 default_backend backendnodes
 
 frontend haproxynodes
-bind *:443 ssl crt /etc/haproxy/certs/www.johncook.tech.pem
+bind *:443 ssl crt /etc/haproxy/certs/johncook.tech.pem
 reqadd X-Forwarded-Proto:\ http
 acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 use_backend letsencrypt-backend if letsencrypt-acl
