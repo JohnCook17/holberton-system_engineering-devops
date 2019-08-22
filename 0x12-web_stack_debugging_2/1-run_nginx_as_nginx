@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# stops nginx, changes user and restarts
+
+service nginx stop
+sed -i '/#user www-data;/r user nginx' /etc/nginx/nginx.conf
+sed -i '/listen [::]:80 default_server ipv6only=on;/a listen 8080;' /etc/nginx/sites-enabled/default
+service nginx start
