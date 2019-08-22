@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# looks for user in /etc/passwd if not found creates user
+
+if [ $# != 1 ]
+then
+    exit 1
+fi
+if [ "$(cut -d: -f1 /etc/passwd | grep "$1")" != "$1" ]
+then
+    adduser "$1"
+    su - "$1"
+    whoami
+else
+    su - "$1"
+    whoami
+fi
