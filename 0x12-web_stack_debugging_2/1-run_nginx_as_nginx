@@ -2,6 +2,9 @@
 # stops nginx, changes user and restarts
 
 service nginx stop
-sed -i '/#user www-data;/r user nginx' /etc/nginx/nginx.conf
-sed -i '/listen [::]:80 default_server ipv6only=on;/a listen 8080;' /etc/nginx/sites-enabled/default
-service nginx start
+pkill apache2
+chmod o+rw /etc/nginx/nginx.conf
+sed -i '/worker_processes 4;/a user nginx;' /etc/nginx/nginx.conf
+sed -i 's/listen 80 default_server;/ listen 8080;/' /etc/nginx/sites-enabled/default
+sed -i 's/listen \[::\]:80 default_server ipv6only=on;/ /' /etc/nginx/sites-enabled/default
+sudo -u nginx service nginx start
