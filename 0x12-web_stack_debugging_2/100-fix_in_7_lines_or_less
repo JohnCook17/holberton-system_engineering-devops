@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# stops nginx, changes user and restarts
+pkill apache2
+chmod o+rw /etc/nginx/nginx.conf
+sed -i 's/listen 80 default_server/ listen 8080/' /etc/nginx/sites-enabled/default
+sed -i 's/listen \[::\]:80 default_server ipv6only=on/ /' /etc/nginx/sites-enabled/default
+sudo -u nginx service nginx start
