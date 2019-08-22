@@ -8,9 +8,6 @@ fi
 if [ "$(cut -d: -f1 /etc/passwd | grep "$1")" != "$1" ]
 then
     exit 1
-    #adduser "$1"
-    #su - "$1"
-    #whoami
 else
-    sudo -u $1 whoami
+    sudo -u "$1" whoami
 fi
