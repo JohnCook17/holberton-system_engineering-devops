@@ -1,0 +1,1 @@
+https://medium.com/@jcook0017/a-simple-explanation-of-what-happens-when-you-look-up-a-website-c2252e92a75e
