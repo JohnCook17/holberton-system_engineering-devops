@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# a script to back up a sql database
+
+mysqldump -h localhost -P 3306 -u root -p$1 --all-databases > backup.sql | gzip > "$(date +%d-%m-%Y)".tar.gz
