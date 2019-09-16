@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" gets data from api and saves as json """
+import json
 import requests
 import sys
-import json
+
 
 if __name__ == "__main__":
     with open("USER_ID.json", 'w') as json_file:

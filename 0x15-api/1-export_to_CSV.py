@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""gets data from api and saves to csv"""
+import csv
+import json
 import requests
 import sys
-import json
-import csv
+
+
 
 if __name__ == "__main__":
     with open("USER_ID.csv", mode='w') as uid:
