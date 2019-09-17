@@ -20,6 +20,5 @@ if __name__ == "__main__":
                     inner_dict["completed"] = my_dict.get("completed")
                     my_list.append(inner_dict)
             outer_dict["{}".format(my_id)] = my_list
-            print(my_list)
         results = outer_dict
         json.dump(results, json_file)
