@@ -6,8 +6,8 @@ import sys
 
 
 if __name__ == "__main__":
-    with open("USER_ID.json", 'w') as json_file:
-        employee_id = sys.argv[1]
+    employee_id = sys.argv[1]
+    with open("{}.json".format(employee_id), 'w') as json_file:
         data = requests.get("https://jsonplaceholder.typicode.com/todos/",
                             params={"userId": employee_id}).json()
         user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
