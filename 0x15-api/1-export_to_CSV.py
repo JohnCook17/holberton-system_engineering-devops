@@ -17,7 +17,7 @@ if __name__ == '__main__':
                             params={'userId': employee_id}).json()
         user = requests.get('https://jsonplaceholder.typicode.com/users/{}'
                             .format(employee_id)).json()
-        name = user.get('name')
+        name = user.get('username')
         for my_dict in data:
             uid_writer.writerow([name,
                                  employee_id,
