@@ -19,7 +19,7 @@ if __name__ == '__main__':
                             .format(employee_id)).json()
         name = user.get('username')
         for my_dict in data:
-            uid_writer.writerow([name,
-                                 employee_id,
+            uid_writer.writerow([employee_id,
+                                 name,
                                  my_dict.get('completed'),
                                  my_dict.get('title')])
