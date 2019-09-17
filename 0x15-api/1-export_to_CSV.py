@@ -7,12 +7,12 @@ import sys
 
 
 if __name__ == '__main__':
-    with open('USER_ID.csv', mode='w') as uid:
+    employee_id = sys.argv[1]
+    with open('{}.csv'.format(employee_id), mode='w') as uid:
         uid_writer = csv.writer(uid,
                                 delimiter=',',
                                 quotechar='"',
                                 quoting=csv.QUOTE_ALL)
-        employee_id = sys.argv[1]
         data = requests.get('https://jsonplaceholder.typicode.com/todos/',
                             params={'userId': employee_id}).json()
         user = requests.get('https://jsonplaceholder.typicode.com/users/{}'
