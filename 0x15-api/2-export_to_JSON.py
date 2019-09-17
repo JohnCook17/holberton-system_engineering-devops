@@ -12,7 +12,7 @@ if __name__ == "__main__":
                             params={"userId": employee_id}).json()
         user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                             .format(employee_id)).json()
-        name = user.get("name")
+        name = user.get("username")
         total_task = len(data)
         my_list = []
         for my_dict in data:
