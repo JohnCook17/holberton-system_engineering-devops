@@ -13,12 +13,10 @@ if __name__ == "__main__":
         user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                             .format(employee_id)).json()
         name = user.get("username")
-        print(name)
-        total_task = len(data)
         my_list = []
-        empty_dict = {}
         for my_dict in data:
-            for _ in list(my_dict):
+            empty_dict = {}
+            for _ in my_dict.values():
                 empty_dict["task"] = my_dict.get("title")
                 empty_dict["completed"] = my_dict.get("completed")
                 empty_dict["username"] = name
