@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" gets top 10 post on subreddit """
 import json
 import requests
 
