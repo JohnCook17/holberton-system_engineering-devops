@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
+""" gets the number of subs for a subreddit """
 import json
 import requests
 
 
 def number_of_subscribers(subreddit):
+    """ a function that takes a subbreddit and returns the number of subs"""
     user_agent = {"User-Agent": "unix:0-subs.py:v1.0"}
     data = requests.get("https://www.reddit.com/r/{}/about.json"
                         .format(subreddit),
