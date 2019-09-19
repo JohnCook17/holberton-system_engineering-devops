@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 """ gets the number of subs for a subreddit """
 import json
 import requests
