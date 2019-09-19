@@ -13,6 +13,10 @@ def top_ten(subreddit):
                         allow_redirects=False)
     if data.status_code != 200:
         print("None")
-    json_data = data.json().get("data").get("children", [])[0:10]
-    for post in json_data:
+        return
+    json_data = data.json().get("data").get("children", [])
+    if len(json_data) == 0:
+        print("None")
+        return
+    for post in json_data[0:10]:
         print(post.get("data").get("title"))
